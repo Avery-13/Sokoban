@@ -1,0 +1,3 @@
+Rooms (c) Thinking Rabbitt
+
+Sokoban was created in 1980 by Hiroyuki Imabayashi and published in 1982 by Thinking Rabbit.

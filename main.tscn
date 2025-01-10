@@ -1,0 +1,25 @@
+[gd_scene load_steps=9 format=3 uid="uid://0xf6qypjwbdb"]
+
+[ext_resource type="PackedScene" uid="uid://cjjl73hlfic7s" path="res://box.tscn" id="1_1r7b3"]
+[ext_resource type="Script" path="res://camera_3d.gd" id="1_snibo"]
+[ext_resource type="PackedScene" uid="uid://2x6u4w0ds00l" path="res://floor.tscn" id="2_alsfc"]
+[ext_resource type="PackedScene" uid="uid://cabfdgioihqtw" path="res://brick.tscn" id="3_vykbr"]
+[ext_resource type="PackedScene" uid="uid://o4m61u310rq2" path="res://target.tscn" id="4_xor00"]
+[ext_resource type="PackedScene" uid="uid://dwkylly7q0po" path="res://player.tscn" id="5_rdg8j"]
+[ext_resource type="PackedScene" uid="uid://cmolghm51jd53" path="res://levelmanager.tscn" id="6_s6dn7"]
+[ext_resource type="PackedScene" uid="uid://dj40veaxy7kkc" path="res://grass.tscn" id="6_ug5g3"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 10, 10, 6)
+script = ExtResource("1_snibo")
+
+[node name="Node3D6" parent="." instance=ExtResource("6_s6dn7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8.92275, 0, 7.13779)
+wall_scene = ExtResource("3_vykbr")
+box_scene = ExtResource("1_1r7b3")
+player_scene = ExtResource("5_rdg8j")
+target_scene = ExtResource("4_xor00")
+grass_scene = ExtResource("6_ug5g3")
+floor_scene = ExtResource("2_alsfc")

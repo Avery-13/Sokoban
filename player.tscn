@@ -1,0 +1,27 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwkylly7q0po"]
+
+[ext_resource type="Texture2D" uid="uid://dr4x7bkmnuu55" path="res://Assets/player/npcfemaleidle.png" id="1_mc66q"]
+[ext_resource type="Script" path="res://playerController.gd" id="1_oy4h8"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_1ooga"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_f38fp"]
+transparency = 1
+albedo_texture = ExtResource("1_mc66q")
+uv1_scale = Vector3(0.33, 1, 1)
+uv1_offset = Vector3(0.5, 0.5, 0.5)
+uv1_triplanar = true
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fo582"]
+
+[node name="CharacterBody3D" type="CharacterBody3D"]
+collision_mask = 7
+script = ExtResource("1_oy4h8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_1ooga")
+surface_material_override/0 = SubResource("StandardMaterial3D_f38fp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.8, 0, 0, 0, 1, 0, 0, 0, 0.8, 0, 0, 0)
+shape = SubResource("BoxShape3D_fo582")

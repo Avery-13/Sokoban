@@ -1,0 +1,16 @@
+[gd_scene load_steps=4 format=3 uid="uid://o4m61u310rq2"]
+
+[ext_resource type="Texture2D" uid="uid://bt6e277e0l2ik" path="res://Assets/orb_red.png" id="1_lgyq4"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_w2xux"]
+size = Vector2(1, 1)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_lyw3g"]
+transparency = 1
+albedo_texture = ExtResource("1_lgyq4")
+
+[node name="Node3D" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("PlaneMesh_w2xux")
+surface_material_override/0 = SubResource("StandardMaterial3D_lyw3g")
