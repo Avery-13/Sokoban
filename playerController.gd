@@ -35,7 +35,7 @@ func move_player():
 			if not check_collision(box_position_after_push):
 				box.global_transform.origin += move_direction
 				global_transform.origin += move_direction
-				print("Box pushed!")
+				#print("Box pushed!")
 			else:
 				print("Blocked! Can't push box.")
 		else:
