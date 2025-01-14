@@ -104,9 +104,6 @@ func load_level(file_path):
 func spawn_tile(scene: PackedScene, position: Vector3):
 	# Instantiate the tile
 	var tile_instance = scene.instantiate()
-
-	# ✅ Add the tile to the scene first, THEN set the position
 	add_child(tile_instance)
-	# ✅ Set position only after the tile is added to the tree
 	tile_instance.name = tile_instance.get_class() + "_" + str(position)
 	tile_instance.global_transform.origin = position
